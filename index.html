@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub | Download Free PDF Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-book-open"></i> Knowledge Hub</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">PDF Library</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+                <button id="theme-toggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Download Free PDF Resources</h1>
+                <p>Access our growing library of educational PDFs, guides, and resources. Download instantly or preview before downloading.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToPDFs()">Browse PDF Library</button>
+                    <button class="btn btn-outline" onclick="showAllContent()">View All Resources</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>PDF Resources</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10K+</h3>
+                        <p>Downloads</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Free Access</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="PDF Resources Library">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Download Our PDFs?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Instant Download</h3>
+                    <p>Get immediate access to all PDF resources with just one click. No registration required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Preview Before Download</h3>
+                    <p>View PDF content directly in your browser before deciding to download.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>High Quality</h3>
+                    <p>All PDFs are professionally formatted, well-researched, and regularly updated.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Organized Categories</h3>
+                    <p>Find exactly what you need with our carefully organized PDF categories and tags.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Showcase -->
+    <section class="content-showcase" id="contentSection">
+        <div class="container">
+            <h2 class="section-title">Resource Library</h2>
+            <div class="content-tabs">
+                <button class="tab-btn active" data-tab="all">All Resources</button>
+                <button class="tab-btn" data-tab="blogs">Blogs</button>
+                <button class="tab-btn" data-tab="stories">Stories</button>
+                <button class="tab-btn" data-tab="pdfs">PDF Downloads</button>
+            </div>
+            <div class="content-grid">
+                <!-- Blog Posts -->
+                <div class="content-item blog-post" data-category="blogs">
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Blog Post">
+                    </div>
+                    <div class="content-details">
+                        <h3>The Future of Web Development</h3>
+                        <p class="content-meta">By John Doe • May 15, 2023 • 5 min read</p>
+                        <p>Exploring the latest trends and technologies shaping the future of web development and design.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Story -->
+                <div class="content-item story" data-category="stories">
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Story">
+                    </div>
+                    <div class="content-details">
+                        <h3>The Midnight Train</h3>
+                        <p class="content-meta">By Jane Smith • May 12, 2023 • 8 min read</p>
+                        <p>A mysterious journey on a midnight train leads to unexpected encounters and revelations.</p>
+                        <a href="#" class="read-more">Read Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- PDF Download Cards -->
+                <div class="content-item pdf-download" data-category="pdfs">
+                    <div class="content-image pdf-image">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="pdf-badge">Programming</div>
+                    </div>
+                    <div class="content-details">
+                        <h3>JavaScript Advanced Concepts</h3>
+                        <p class="content-meta">By Tech Academy • 65 pages • 2.4 MB</p>
+                        <p>Advanced JavaScript concepts including closures, promises, and async/await with practical examples.</p>
+                        <div class="pdf-actions">
+                            <a href="pdfs/javascript-advanced.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <button class="btn btn-outline view-pdf-btn" data-pdf="pdfs/javascript-advanced.pdf" data-title="JavaScript Advanced Concepts">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                        <div class="download-stats">
+                            <span class="download-count"><i class="fas fa-download"></i> 1,243 downloads</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item pdf-download" data-category="pdfs">
+                    <div class="content-image pdf-image">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="pdf-badge">Design</div>
+                    </div>
+                    <div class="content-details">
+                        <h3>CSS Grid Complete Guide</h3>
+                        <p class="content-meta">By Web Design Pro • 42 pages • 1.8 MB</p>
+                        <p>Complete guide to CSS Grid layout with examples, best practices, and responsive design techniques.</p>
+                        <div class="pdf-actions">
+                            <a href="pdfs/css-grid-guide.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <button class="btn btn-outline view-pdf-btn" data-pdf="pdfs/css-grid-guide.pdf" data-title="CSS Grid Complete Guide">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                        <div class="download-stats">
+                            <span class="download-count"><i class="fas fa-download"></i> 987 downloads</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item pdf-download" data-category="pdfs">
+                    <div class="content-image pdf-image">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="pdf-badge">Writing</div>
+                    </div>
+                    <div class="content-details">
+                        <h3>Creative Writing Techniques</h3>
+                        <p class="content-meta">By Writing Masters • 38 pages • 1.5 MB</p>
+                        <p>Learn advanced creative writing techniques, storytelling methods, and character development strategies.</p>
+                        <div class="pdf-actions">
+                            <a href="pdfs/creative-writing.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <button class="btn btn-outline view-pdf-btn" data-pdf="pdfs/creative-writing.pdf" data-title="Creative Writing Techniques">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                        <div class="download-stats">
+                            <span class="download-count"><i class="fas fa-download"></i> 756 downloads</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item pdf-download" data-category="pdfs">
+                    <div class="content-image pdf-image">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="pdf-badge">Business</div>
+                    </div>
+                    <div class="content-details">
+                        <h3>Business Strategy Fundamentals</h3>
+                        <p class="content-meta">By Business Experts • 55 pages • 2.1 MB</p>
+                        <p>Fundamental concepts of business strategy, planning methodologies, and competitive analysis frameworks.</p>
+                        <div class="pdf-actions">
+                            <a href="pdfs/business-strategy.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <button class="btn btn-outline view-pdf-btn" data-pdf="pdfs/business-strategy.pdf" data-title="Business Strategy Fundamentals">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                        <div class="download-stats">
+                            <span class="download-count"><i class="fas fa-download"></i> 1,102 downloads</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item pdf-download" data-category="pdfs">
+                    <div class="content-image pdf-image">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="pdf-badge">Programming</div>
+                    </div>
+                    <div class="content-details">
+                        <h3>Python for Beginners</h3>
+                        <p class="content-meta">By Code Academy • 72 pages • 3.2 MB</p>
+                        <p>Complete Python programming guide for absolute beginners with hands-on exercises and projects.</p>
+                        <div class="pdf-actions">
+                            <a href="pdfs/python-beginners.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                            <button class="btn btn-outline view-pdf-btn" data-pdf="pdfs/python-beginners.pdf" data-title="Python for Beginners">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                        <div class="download-stats">
+                            <span class="download-count"><i class="fas fa-download"></i> 2,345 downloads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Categories Section -->
+    <section class="pdf-categories">
+        <div class="container">
+            <h2 class="section-title">PDF Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="programming">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>15 PDFs</p>
+                </div>
+                <div class="category-card" data-category="design">
+                    <i class="fas fa-palette"></i>
+                    <h3>Design</h3>
+                    <p>12 PDFs</p>
+                </div>
+                <div class="category-card" data-category="business">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Business</h3>
+                    <p>10 PDFs</p>
+                </div>
+                <div class="category-card" data-category="writing">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Writing</h3>
+                    <p>8 PDFs</p>
+                </div>
+                <div class="category-card" data-category="marketing">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Marketing</h3>
+                    <p>7 PDFs</p>
+                </div>
+                <div class="category-card" data-category="personal">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Personal Growth</h3>
+                    <p>9 PDFs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Panel -->
+    <section class="customization-panel">
+        <div class="container">
+            <h2 class="section-title">Customize Your Experience</h2>
+            <div class="customization-options">
+                <div class="option-group">
+                    <h3>Theme Color</h3>
+                    <div class="color-options">
+                        <div class="color-option" data-color="#4a6fa5" style="background-color: #4a6fa5;"></div>
+                        <div class="color-option" data-color="#6b5b95" style="background-color: #6b5b95;"></div>
+                        <div class="color-option" data-color="#4caf50" style="background-color: #4caf50;"></div>
+                        <div class="color-option" data-color="#ff6b6b" style="background-color: #ff6b6b;"></div>
+                        <div class="color-option" data-color="#ff9800" style="background-color: #ff9800;"></div>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h3>Font Size</h3>
+                    <div class="font-size-options">
+                        <button class="font-size-btn" data-size="small">Small</button>
+                        <button class="font-size-btn active" data-size="medium">Medium</button>
+                        <button class="font-size-btn" data-size="large">Large</button>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h3>Layout</h3>
+                    <div class="layout-options">
+                        <button class="layout-btn active" data-layout="grid">Grid</button>
+                        <button class="layout-btn" data-layout="list">List</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Knowledge Hub</h3>
+                    <p>A platform for sharing knowledge, stories, and educational resources with a global community.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Stories</a></li>
+                        <li><a href="#">PDF Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new PDF resources and features.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Knowledge Hub. All rights reserved. | <span id="total-downloads">5,433 PDF Downloads</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PDF Preview Modal -->
+    <div class="pdf-modal" id="pdfModal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfModalTitle">PDF Preview</h3>
+                <button class="close-pdf" id="closePdf">&times;</button>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdfFrame" src="" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
