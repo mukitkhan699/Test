@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-5643196088825095">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub | Download Free PDF Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-book-open"></i> Knowledge Hub</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Stories</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">PDF Library</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+                <button id="theme-toggle" class="btn-icon"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+               
+            <div class="hero-image">
+                <img src="https://pixabay.com/get/g1b8d97a53b4ce5d3a5f6e7d5d7fbc50e02942086b1595648b79fcaf8c56f1c3bbba6a22123955280b9a811f270904837cef6c431fdc767b34b5781c8d8e2813d_1920.jpg" alt="Resources Library">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <h2>The Future of Gadgets: Top 5 Must-Have Tech Innovations in 2025</h2>
+    
+    <p>Hello, tech enthusiasts!</p>
+    <br>
+    <p>Welcome to my blog, where we dive into the exciting world of technology and gadgets. Today, I want to discuss some of the most innovative gadgets that are set to transform our lives in 2024. With rapid advancements in technology, staying updated can feel overwhelming, but I’m here to help you navigate through the noise. Let’s take a closer look at five must-have tech innovations that you should keep an eye on this year!</p>
+    <br><br>
+    <p>1. Smart Glasses</p>
+    <br><br>
+    <p>Smart glasses are making a significant comeback, and this time, they’re better than ever. With features like augmented reality (AR) overlays, built-in voice assistants, and real-time translation, these glasses can enhance our daily experiences. Imagine navigating through a new city with directions displayed right in your field of vision or having hands-free access to notifications. Brands like Google and Apple are investing heavily in this technology, making it more accessible to consumers.</p>
+    <br><br>
+    <p>2. Foldable Phones</p>
+    <br><br>
+    <p>Foldable phones have evolved from a novelty to a practical device. The latest models offer larger screens without compromising portability. With features like multitasking capabilities and improved durability, these phones are perfect for those who need to stay productive on the go. Samsung and Huawei are leading the charge with their innovative designs, making foldable phones a hot trend in 2025.</p>
+    <br><br>
+    <p>3. Wireless Charging Stations</p>
+    <br><br>
+    <p>As we continue to embrace a wireless lifestyle, wireless charging stations are becoming a household staple. These gadgets not only reduce cable clutter but also support multiple devices simultaneously. Look for stations that offer fast charging and compatibility with various devices, including smartphones, smartwatches, and earbuds. With the rise of smart homes, integrating a wireless charging solution into your space is both convenient and stylish.</p>
+    <br><br>
+    <p>4. Smart Home Security Systems</p>
+    <br><br>
+    <p>Home security technology has come a long way, and the latest smart home security systems are more advanced than ever. With features like facial recognition, real-time alerts, and integration with other smart devices, these systems provide peace of mind like no other. Some models even offer smart locks and doorbells with built-in cameras, allowing you to monitor your home from anywhere. Investing in a smart security system is not only about safety but also about making your home more efficient.</p>
+    <br><br>
+    <p>5. Wearable Health Tech</p>
+    <br><br>
+    <p>The growing focus on health and wellness has led to the rise of wearable health technology. From smartwatches to fitness trackers, these gadgets can monitor everything from heart rate to sleep patterns. In 2024, we can expect even more advanced features, such as blood oxygen monitoring and electrocardiogram (ECG) capabilities. These devices empower users to take control of their health and make informed lifestyle choices.</p>
+    <br><br>
+    <p>Conclusion</p>
+    <br><br>
+    <p>As we embrace 2025, these innovative gadgets promise to enhance our lives in countless ways. Whether you’re looking to improve your productivity, stay connected, or prioritize your health, there’s a tech solution out there for you. Keep an eye on these trends, and don’t hesitate to explore the latest gadgets that catch your eye!</p>
+    <br><br>
+    <p>I hope you enjoyed this glimpse into the future of technology and gadgets. Stay tuned for more updates and insights into the ever-evolving tech landscape. What gadgets are you excited about this year? Let me know in the comments below!</p>
+    <br><br>
+    <p>Happy exploring!</p>
+    <br><br>
+    <p>Best,</p>
+    <br>
+    <p>Md. Abdul Mukit Khan</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+               <div class="footer-section">
+                    <h3>Knowledge Hub</h3>
+                    <p>A platform for sharing knowledge, stories, and educational resources with a global community.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/MukitKhan612281?t=-L1hsrlcezTU5v6EfY-FNQ&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Stories</a></li>
+                        <li><a href="#">PDF Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new PDF resources and features.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Knowledge Hub. All rights reserved. | <span id="total-downloads">5,433 PDF Downloads</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PDF Preview Modal -->
+    <div class="pdf-modal" id="pdfModal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfModalTitle">PDF Preview</h3>
+                <button class="close-pdf" id="closePdf">&times;</button>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdfFrame" src="" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
