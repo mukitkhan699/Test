@@ -211,6 +211,37 @@ a:hover {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 15px 20px;
+    }
+
+    .user-actions {
+        display: none;
+    }
+}
+
 /* Hero Section */
 .hero {
     padding: 80px 0;
