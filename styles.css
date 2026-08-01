@@ -168,28 +168,28 @@ a:hover {
     margin-right: 10px;
 }
 
-.nav ul {
+.nav {
     display: flex;
     list-style: none;
 }
 
-.nav ul li {
+.nav a {
     margin: 0 15px;
 }
 
-.nav ul li a {
+.nav a {
     color: var(--text-color);
     font-weight: 500;
     padding: 5px 0;
     position: relative;
 }
 
-.nav ul li a.active,
-.nav ul li a:hover {
+.nav a.active,
+.nav a:hover {
     color: var(--primary-color);
 }
 
-.nav ul li a.active::after {
+.nav a.active::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -226,14 +226,14 @@ a:hover {
     }
 
     .nav.active {
-        display: block;
+        display: flex;
     }
 
-    .nav ul {
+    .nav {
         flex-direction: column;
     }
 
-    .nav ul li {
+    .nav a{
         margin: 15px 20px;
     }
 
@@ -891,4 +891,117 @@ a:hover {
         height: 100%;
         border-radius: 0;
     }
+}
+
+.about-cv{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  max-width: 1000px;
+}
+
+.a-sec-left{
+  width: 40%;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #000;
+  display: block;
+  overflow: hidden;
+  margin-right: 0;
+}
+
+.a-sec-right{
+  background-color: #f00;
+  height: 100vh;
+  width: 60%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.a-image{
+  width: 120px;
+  height: 120px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  margin: 15px;
+  margin-top: 20px;
+}
+
+.a-profile-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.a-name-div {
+  text-align: center;
+}
+
+.skills ul li {
+  font-size: 10px;
+}
+
+.skills{
+  padding: 10px;
+}
+
+.skills ul {
+  padding: 0 10px;
+  padding-left: 20px;
+}
+
+.a-name{
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.a-profession{
+  font-size: 10px;
+  color: #dd3b92a1;
+}
+
+.a-secl-rest > div {
+  color: #fff;
+  padding: 10px;
+  font-size: 10px;
+}
+
+.languages ul li {
+  font-size: 10px;
+}
+
+.languages{
+  padding: 10px;
+}
+
+.languages ul {
+  padding: 0 10px;
+  padding-left: 20px;
+}
+
+.a-bigger-font{
+  font-size: 15px;
+}
+
+.a-contact a{
+  padding: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.a-contact p {
+  margin: 2px;
+}
+
+.a-hobbies ul {
+  padding: 0 10px;
+  padding-left: 20px;
 }
