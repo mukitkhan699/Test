@@ -1,5 +1,7 @@
 /* styles.css */
-
+* {
+	-webkit-tap-highlight-color: transparent;
+}
 /* CSS Variables for Customization */
 :root {
     --primary-color: #4a6fa5;
