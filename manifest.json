@@ -1,0 +1,19 @@
+{
+  "name": "Knowledge Hub",
+  "short_name": "KnowledgeHub",
+  "description": "Free educational resources, PDFs, and guides",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a6fa5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
