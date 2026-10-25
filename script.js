@@ -4,23 +4,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('i');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
     
     // Check for saved theme preference or default to light
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
     
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
     
     function updateThemeIcon(theme) {
+        if (!themeIcon) return;
         if (theme === 'dark') {
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
@@ -136,10 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             
             // Apply layout
-            if (layout === 'grid') {
-                contentGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(350px, 1fr))';
-            } else if (layout === 'list') {
-                contentGrid.style.gridTemplateColumns = '1fr';
+            if (contentGrid) {
+                if (layout === 'grid') {
+                    contentGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(350px, 1fr))';
+                } else if (layout === 'list') {
+                    contentGrid.style.gridTemplateColumns = '1fr';
+                }
             }
             
             // Save to localStorage
@@ -153,10 +158,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (btn.getAttribute('data-layout') === savedLayout) {
             btn.classList.add('active');
             
-            if (savedLayout === 'grid') {
-                contentGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(350px, 1fr))';
-            } else if (savedLayout === 'list') {
-                contentGrid.style.gridTemplateColumns = '1fr';
+            if (contentGrid) {
+                if (savedLayout === 'grid') {
+                    contentGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(350px, 1fr))';
+                } else if (savedLayout === 'list') {
+                    contentGrid.style.gridTemplateColumns = '1fr';
+                }
             }
         }
     });
@@ -165,30 +172,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
     
-    mobileMenuToggle.addEventListener('click', function() {
-        nav.classList.toggle('active');
-        
-        if (nav.classList.contains('active')) {
-            mobileMenuToggle.innerHTML = '<i class="fas fa-times"></i>';
-        } else {
-            mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-        }
-    });
+    if (mobileMenuToggle && nav) {
+        mobileMenuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+
+            if (nav.classList.contains('active')) {
+                mobileMenuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        nav.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                nav.classList.remove('active');
+                mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    }
     
     // Newsletter Form Submission
     const newsletterForm = document.querySelector('.newsletter-form');
     
-    newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const emailInput = this.querySelector('input[type="email"]');
-        const email = emailInput.value;
-        
-        if (email) {
-            // In a real application, you would send this to a server
-            alert(`Thank you for subscribing with: ${email}`);
-            emailInput.value = '';
-        }
-    });
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            const email = emailInput.value;
+
+            if (email) {
+                // In a real application, you would send this to a server
+                alert(`Thank you for subscribing with: ${email}`);
+                emailInput.value = '';
+            }
+        });
+    }
     
     // Initialize PDF Features
     initializePDFFeatures();
@@ -204,6 +222,10 @@ function initializePDFFeatures() {
     const pdfModalTitle = document.getElementById('pdfModalTitle');
     const closePdf = document.getElementById('closePdf');
     const viewPdfBtns = document.querySelectorAll('.view-pdf-btn');
+
+    if (!pdfModal || !pdfFrame || !pdfModalTitle || !closePdf) {
+        return;
+    }
 
     // Open PDF in Modal
     viewPdfBtns.forEach(btn => {
