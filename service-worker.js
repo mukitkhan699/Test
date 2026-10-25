@@ -3,11 +3,16 @@ const CACHE_NAME = "knowledge-hub-v1";
 const files = [
   "/",
   "/index.html",
+<<<<<<< HEAD
   "/styles.css",
   "/script.js",
   "/app.js",
   "/icon.png",
   "/manifest.json"
+=======
+  "/style.css",
+  "/app.js"
+>>>>>>> 4059ea543e859d9a249ae0c6bb35b2bd0ef38c2e
 ];
 
 self.addEventListener("install", event => {
@@ -15,6 +20,7 @@ self.addEventListener("install", event => {
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(files))
   );
+<<<<<<< HEAD
   self.skipWaiting();
 });
 
@@ -31,11 +37,14 @@ self.addEventListener("activate", event => {
     })
   );
   self.clients.claim();
+=======
+>>>>>>> 4059ea543e859d9a249ae0c6bb35b2bd0ef38c2e
 });
 
 self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request)
+<<<<<<< HEAD
       .then(response => {
         if (response) {
           return response;
@@ -52,5 +61,8 @@ self.addEventListener("fetch", event => {
           return fetchResponse;
         });
       })
+=======
+      .then(response => response || fetch(event.request))
+>>>>>>> 4059ea543e859d9a249ae0c6bb35b2bd0ef38c2e
   );
 });
